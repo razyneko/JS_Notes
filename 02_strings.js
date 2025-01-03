@@ -24,3 +24,6 @@ repeat(count)
 // Tls allow embedded expressions which are converted into string afterwards
 // using bacticks with ${var_name(also can be an expression)}
 // `I have ${num_cups} cups.`
+
+// Strings are immutable
+
