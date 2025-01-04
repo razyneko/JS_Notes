@@ -27,3 +27,4 @@ repeat(count)
 
 // Strings are immutable
 
+// parseInt("hello") ---> NaN
