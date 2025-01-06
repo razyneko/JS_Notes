@@ -101,6 +101,7 @@
 // arr.splice(1,0,"ts") --> at index 1 , dont delete anything just add "ts" at that index
 // arr = ["ts", "python, "go", "rust", "swift", "fortran", "js"]
 // arr.splice(5,1) ---> it will just delete "fortran" from arr and returns an array of deleted ones ---> ["fortran"]
+// if arr.splice("sjkfsb", 1) ---> it defaults to 0 so first elem will be deleted
 
 // <-------- Array.sort() ---------------->
 
