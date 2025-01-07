@@ -135,3 +135,51 @@
 // arr = ["SDE", "SWE"] // gives an error
 // content can be changed on the same memory reference , container remains the same
 // arr = 1 , const will prevent this kind of action too
+
+
+
+// <----------------------------------- Array Callback Methods ------------------------------------->
+
+// <------------ ForEach ------------->
+
+// accepts a callback function, calls the function "for each" element in the array
+// writing the anonynous function expression is commonly used
+// arr.ForEach(function(el) {console.log(el)}) , we could also pass a named function
+// Nowadays, ( for of ) is used instead
+
+// <------------ Map ---------------->
+
+// creates a new array with the results of calling a callback on every element in the array
+// we return the change we want , the function performs some operation on element and return 
+// like if we want to make all elements twice --- return num * 2
+// it will create an array with all twice now , when we need specific details from lets say an array of objects
+
+// <----------------------- Arrow Functions ----------------------->
+
+// syntactically a compact alternative to a regular function expression, without writing function keyword
+// const func = (params) => {
+//     return (anything)
+// }
+// used to create function expressions
+// for a single argument(only this case)
+// const func = x => {
+//     return (bfdkf)
+// }
+
+// <---- Implicit Returns -----> (only for arrow functions)
+
+// we can skip the return keyword
+// const square = num => (
+//     num * num    // for kind of longer returns
+// )
+
+// const square = num => num * num  // for shorter ones
+// only works if there is only one expression inside function body to be returned(without return keyword)
+
+// using map, ForEach with arrow function 
+
+// arr.map((elem) => {
+    
+// })
+
+// arr.map(elem => elem * 2)  // one liner implicit return
