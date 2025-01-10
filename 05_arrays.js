@@ -154,7 +154,69 @@
 // like if we want to make all elements twice --- return num * 2
 // it will create an array with all twice now , when we need specific details from lets say an array of objects
 
-// <----------------------- Arrow Functions ----------------------->
+// <----------- Filter -------------->
+
+// creates a new array that passes some test by the callback function
+// callback returns a boolean, if true the elem is added to new array
+// parent array remains same
+// if i want like >8.5 imdb rating movies in my movies array of objects
+
+// We can chain filter and map together, there will be usecases
+// movies
+    // .filter(() => {})
+    // .map(() => {})
+
+// <----------- Every ------------->
+
+// array.every(() => {})
+// tests whether all elems of an array pass a test by the callback function
+// returns false even if one elem fails the test, otherwise true
+
+// <----------- Some -------------->
+
+// arr.some(() => {})
+// opposite to every
+// return true if atleast one passes the test by callback function
+
+// <-------------- Reduce -------------------->
+
+// executes a reducer function on each element of an array, resulting in a single value
+// simple usecase --> summing an array
+// [1,2,3,4,5].reduce((accumulator, currentValue) => {
+//         return accumulator + currentValue
+// }, 100) --> 100 will be treated as initial value
+// in each step accumulator is set "accumulator + currentVlaue"
+// it accepts an optional argument to set Initial value to start with
+
+// <---------------------------------------- "this" keyword inside Arrow Functions ------------------------------------>
+
+// Inside an arrow function, "this" refers to "window" object 
+// refers to scope it was created in 
+// "this" has nothing to do with the scope inside a regular function expresson, it has to do how its executed
+// the value of this in an arrow function is same as the scope of function containing arrow function
+
+// const person ={
+    // name: "Ayush",
+    // printName: () => {
+        // console.log(`${this.name}`)             -----> prints undefined -> why ? ---> because "this" for this arrow func will be the "this" 
+        //                                             of the scope it was defined in which is "person" , for person(window.person) the "this value is "window", 
+        //                                             so for this arrow func's "this" is "window" and "window" has no "name" variable, so undefined
+    // },
+//     shoutName: function(){
+//         setTimeout(() => {
+//             console.log(`${this.name}`)            ------> its gonna print "Ayush" , "this" for arrow func is "this" of the scope it was defined 
+//                                                            which is outer function whose
+//                                                            "this" is person object
+//         })
+//     }
+
+// }
+
+// <-------------------------------------------------------------------------------------------------------------------->
+
+
+
+// <---------------------------------------- Arrow Functions ----------------------------------------->
 
 // syntactically a compact alternative to a regular function expression, without writing function keyword
 // const func = (params) => {
@@ -183,3 +245,27 @@
 // })
 
 // arr.map(elem => elem * 2)  // one liner implicit return
+
+
+
+// <--------------------------------------------- setTimeout and setInterval --------------------------------------------->
+
+// <----------- setTimeout ------------>
+
+// delaying or postponing execution of program
+// console.log("before")
+// setTimeout(() => {
+//     console.log("Hi")   --> print Hi after 3 seconds(3000 ms)
+// },3000)
+// console.log("after")
+
+// Output -> before --> after --> (after 3 secs) "Hi"
+
+// <----------- setInterval ----------->
+
+// keeps repeating stuff every x ms
+// const inter = setInterval(() => {
+//     console.log("hi")
+// },1000)
+// repeatedly calls the callback
+// to end it --> clearInterval(inter) --> it stops the setInterval  --> to stop we need to have it stored in a var(it gives id of that particular setInterval)
