@@ -1,4 +1,4 @@
-// word - which has no meaning in js
+// word    - which has no meaning in js
 // keyword - has a specific meaning in code
 
 // variables(can be changed whatever times we need) and constants (can't be changed once assigned)
@@ -17,13 +17,13 @@
 // -----variable which is not even declared , has no existence in code is Not Defined 
 
 // Data Types in JS
-// ---- Primitive type -->  aisi koi bhi value jisse copy krne pr only value copy hoti h reference
-//                          pass nhi hota var ka
-// ---- Reference type [], {}, () includes brackets  -->  in this agr hum a = [1,2,34,5] then b = a krenge then b pe a ka reference 
-// bhi pass hojayega so any changes made in b will also reflect in a coz b is
+// ---- Primitive type -->  no reference is passed only value is copied
+// ---- Reference type [], {}, () includes brackets  -->  in this if a = [1,2,34,5] then if we do,  b = a  
+// the reference of a will be passes and any changes in b will appear in a also
 // pointing to same refrence as a 
 
-// We shouldn't use loops for like 2 or 3 ops coz using console.log() 3 times is far easier , we shouldn't complicate things unnecessarily
+// We shouldn't use loops for like 2 or 3 ops coz using console.log() 3 times is far easier ,
+// we shouldn't complicate things unnecessarily
 
 // DRY - Don't repeat yourself
 
