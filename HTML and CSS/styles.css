@@ -34,3 +34,23 @@ if three divs were there and we did all three absolute the last will come on the
                      
 if an element is position absolute but i want the element inside it to be always remain within its boundaries in that case, there is no need to worry when an element is position absolute , for its child elements it behaves as relative
 */
+
+
+/* overflow : hidden  is useful */
+
+/* we cant generally subtract or do arithmetic with differnt unit types like % and px but we can use calc() to do that inside it we can write like 100 % - 100px */
+
+/* flex-wrap --> it decided whethere content can go onto next line or not, its set to no-wrap by default, which tries to fit the content ont the same line */
+
+/* if we want some element content to come in one line: 
+    white-space: nowrap;
+*/
+
+/* Another common --> How to center a div */
+
+/* {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */

@@ -62,3 +62,129 @@
 // this cant be done using above two
 // but if there is no HTML inside it too returns the text inside
 // we can see all the underlying HTML inside an element
+
+
+// <---------------- Attributes -------------->
+
+// if img ta with id and src
+// document.querySelector('img').id / document.querySelector('img').src --> this value comes from js
+// we can access value of attributes like that
+// another method -> elem.getAttribute('href') --> it gives actual text inside href of the html element
+// in most cases they are gonna be the same, but in case of href for a tag, it can be different
+
+// we can also set attributes using elem.setAttribute('href', 'www.google.com')
+// we can directly set attributes by '.' syntax or we can use setAttribute()
+
+
+// <------------------ Manipulating Styles ---------------->
+
+// style object only contains the details of styles that were set inline, not from a seperate stylesheet
+// if we have an h1 with color red, when we do h1.style.color -> it gives empty string
+// the dom object for style --> CSSStyleDeclaration and has all CSS props in camelCase
+// and when we do add styles using elem.style.color = 'red', it is set as an inline style,
+// its not preferred generally, but it does work, thats where classList comes into picture
+// even if we want to get the data from the stylesheet
+// after everything is loaded we can use window.getComputedStyle(elem).color -> gives css text   ( CSSStyleDeclaration) --> gives object of 
+// all css data with values in strings
+
+// <------------------ classList --------------------------->
+
+// one way to add a class is to use setAttribute('class', 'red-class')
+// but the problem with it is that it overwrites what was initially inside the class attribute
+// the fix is elem.classList.add('certain-class'), it doesnt overwrites as the name suggests
+// elem.classList returns a DOMTokenList
+// adding classes to elements, we can write those classes in css file and just add the class to desired element to make changes in it.
+// we can remove using elem.classList.remove
+// to check if it has a certain class --> elem.classList.contains('class-name') returns boolean
+// the more commonly used is "toggle", adding or removing , if its prsesent remove it, if its not add it
+// elem.classList.toggle('certain-class')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <----------------------------- Event Bubbling / Event Propogation -------------------------->
+
+// Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an
+// event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor
+// elements in the DOM tree until it gets to the root element.
+
+// This is the default behavior of events on elements unless you stop the propagation 
+
+// When elements receive events, such events propagate to their parents and ancestors upward in the DOM tree.
+// This is the concept of Event Bubbling, and it allows parent elements to handle events that occur on their
+// children's elements.
+
+// Event objects also have the stopPropagation method which you can use to stop the bubbling of an event. This
+// is useful in cases where you want an element to receive a click event only when it is clicked and not when
+// any of its children elements are clicked.
+
+// stopPropagation and preventDefault are methods of the event object for stopping default behaviors. 
+
+// <----------------------- event.preventDefault() ----------------------->
+
+// This method prevents default actions that browsers make when an event is triggered.
+
+// <---------- How to override default form submission --------->
+
+// When a user submits a form (the submit button clicked), the default action of the form is to submit the
+// form's data to a URL that processes the data.
+
+// Form elements have the action and method attributes which specify the URL to submit the form to and the type
+// of request (get, post, and so on), respectively.
+
+// If these attributes are not provided, the default URL is the current URL the form was submitted on, and the
+// method is get.
+
+// This action is how browsers handle forms by default.
+
+// But you may want to do more things to the data before sending a request. This is especially common in
+//  today's approach to handling forms.
+
+// You may want to do some data validation, data checks, processing, configuring headers, and so on before
+//  sending the request to a URL.
+
+// const form = document.getElementById('form')
+
+// form.addEventListener('submit', (event) => {
+//   event.preventDefault()
+
+//   // process data and submit a request manually
+// })
+
+// <-------------------------- Difference ----------------------->
+
+// The difference between event.preventDefault() and event.stopPropagation() is that the former prevents
+// default actions made by the browser, while the latter prevents the default behaviors of events –propagating
+// up the tree.
