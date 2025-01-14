@@ -100,16 +100,110 @@
 // elem.classList.toggle('certain-class')
 
 
+// <------------------ parentElement, children, child, nextSibling/previousSibling and nextElementSibling/previousElementSibling ------------>
+
+// elem.parentElement --> gives the direct parent of elem
+// elem.children --> HTMLCollection of all the children, elem.childrenCount -> gives total number of children
+// elem.nextSibling/ elem.previousSibling --> gives DOM nodes (generally text nodes(newlines))
+// elem.nextElementSibling -> actually give u the result u want
+
+
+// <------------------ document.createElement(), append(), appendChild(), prepend(), remove() -------------------->
+
+// document.body.appendChild() --> appends the elem as a child in body
+// append() --> newer --> by using this, we can append more than 1 elems at once
+// p.append("i have been appended to p", "Also this can be appended") --> this text will be added to p
+// but p.appendChild("some text")      ❌ 
+// prepend() --> add at the start
+// targetElement.insertAdjacentElement(position, element)  --> 'beforebegin', 'afterbegin', 'beforeend', 'afterend'
+// elem.after() and elem.before()
+// append() and prepend() can take directly some text inside them too
+// const ctr = document.querySelector('#container');
+//  const btn = document.createElement('button');
+//  btn.innerText = 'Hey!'
+// for (let i = 0; i < 100; i++){
+
+//  ctr.append(btn) 
+// }
+
+// why this only adds one button
+
+// <----- Fix----->
+// This happens because you are appending the same button (btn) to the container 100 times. In the DOM, a single element can only
+// exist in one place at a time. When you append btn repeatedly, it gets removed from its previous position and added again at
+// the end, leaving only one instance in the container.
+
+// removeChild() --> Older --> select parent and then remove the child
+// h1.parentElement.removeChild(h1) // in one go
+// li.remove() --> just removes the li
 
 
 
+// <--------------------------------------- EVENTS ----------------------------------------->
+
+// responding to user inputs or actions
+
+// <-------------- Inline Events ---------------->
+// <----------- first way ------------->
+// <button onclick="alert('Hi'); alert('hi again')">Click me</button>
+// btw there is also a ondblclick event
+
+// <-------------- External Script -------------->
+// <----------- second way ------------->
+// in ext script, we can do btn.onClick = function() {}
+// set the event property to a function that will run when the event is triggered
+
+// <----------- third way -------------->
+
+// <----- addEventListener() ------>
+// button.addEventListener('click', function () {
+    // accepts event and a callback function that will run when event is triggered
+// })  
+// when we are setting button.onClick --> we can set it to only one value as its a property
+// but using addEventListener()
+// button.addEventListener('click', func1(){})  --> this executes first
+// button.addEventListener('click', func2(){})  --> this executes second
+// with eventListeners we can pass the optional "options" object
+// it has many properties like capture, once , passive
+// of we set once : true --> event is handled one time only 
+// after that event listener is removed entirely
+
+// there is also a removeEventListener()
+
+// try to make ur code as modular as u can, see if u can make seprate functions for certain tasks
+// a functionality that is standalone
+
+// <------------------------------- "this" keyword in Events --------------------------->
+
+// Inside an event handler callback, "this" keyword refers to the Node on which event was called
+// button.addEventListener('click', function() {
+    // this.style.backgroundColor = "blue"
+    // here this --> button on which the event was called
+// })
+
+// <----------------------- event Object and Keyboard Events -------------->
+
+// its passed in the callback each time an event was triggered
+// keydown -> pressing the key , and keyup --> releasing the key
+// In a Keyboard event, the key : "q" --> refers to key which was pressed and can be different for different language keyboards, but the code : KeyQ --> this is gonna be same always, used in games and stuff
 
 
+// <---------------------- Form Events and e.preventDefault() -------------->
 
+// Default behaviour of form is that it submits the form and redirect to a url whatever action attribute was
+// set to
+// to prevent this default behaviour, we use e.preventDefault()
+// we may sometimes need to work on the data provided inside the form
+// not specific to forms but mostly
+// input.value --> data inside form input
+// stop the default behaviour --> get the data inputted ---> perform some logic ----> update the page
+// if action is set to "" or no action at all --> form just submits to same page, the page refreshes
 
-
-
-
+// inside the form DOM object we get access to "elements" property that contains all the elems inside the form as a HTMLCollection
+// rather than indexing the collection to get particular form input value, if the inputs are interchanged it will mess it up
+// thats why we set "name" attribute, it is set as a property inside elements(inside form DOM object)
+// giving a name attribute is always a good idea
+// bascially it can reference a particular input 
 
 
 

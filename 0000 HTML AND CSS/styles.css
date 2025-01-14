@@ -54,3 +54,5 @@ if an element is position absolute but i want the element inside it to be always
     left: 50%;
     transform: translate(-50%,-50%);
 } */
+
+/* whitespace: no-wrap --> means come to the same line if not */
