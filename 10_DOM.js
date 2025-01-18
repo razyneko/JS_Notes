@@ -206,29 +206,27 @@
 // bascially it can reference a particular input 
 
 
+// <---------------------- Change and Input Events ------------------------->
 
+// input.addEventListener('change', () => {
+//     console.log("hi")   --> its only fired when we leave the input (value of input should be changed)
+// })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// input.addEventListener('input', () => {
+//     console.log("hi")   --> its fired when the value of input changes
+// })
 
 // <----------------------------- Event Bubbling / Event Propogation -------------------------->
+
+// child elements listen for the events on their ancestors 
+// consider bubbles coming to the top in a fish tank
+// <div>
+// <p>
+    // <button></button>   ---> if all three are listening for some event, so if the button is clicked the events are triggered from the button to the top order elements
+// </p>
+// </div>
+// we may want to avoid it sometimes
+// e.stopPropogation() is used to not listen for ancestors' events
 
 // Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an
 // event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor
@@ -282,3 +280,16 @@
 // The difference between event.preventDefault() and event.stopPropagation() is that the former prevents
 // default actions made by the browser, while the latter prevents the default behaviors of events –propagating
 // up the tree.
+
+
+// <---------------------------------------- Event Delegation --------------------------------------->
+
+// lets say we have a simple to do list and we have two todos inside (lis inside ul)
+// we added event listener to li so that clicking on it deletes it
+// now if there is no element in todo list and there is also functionality to add new todos , it wont work on new ones
+// as they were not present when the code ran
+// this is called event delegation
+// one quick way to fix it to use addEventListener on "ul" as it is always gonna be there
+// use e.target === 'li' && e.target.remove
+// use e.target.nodeName === 'LI' && e.target.remove
+// use events on the elements that are always going to be in the page
