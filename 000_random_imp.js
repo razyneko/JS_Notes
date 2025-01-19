@@ -65,3 +65,5 @@
 // Avoid using async for scripts that depend on each other (it can lead to execution order issues)
 
 // Number.isNaN(num) to check if numebr is NaN
+// disabled property of an element object takes boolean values 
+// 'true' --> truthy but 'false' --> truthy as well
