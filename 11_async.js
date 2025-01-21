@@ -36,3 +36,83 @@
 // Browsers come with WebAPIs that are able to handle certain tasks in the background(like making reqs or setTimeout())
 // The JS call stack recognizes those WebAPI functions and passes them off to the browser to take care of
 // Once the browser finishes those tasks they return and are pushed onto the stack as a callback
+
+// <----------------------------------- Callback Hell --------------------------------->
+
+// setTimeout(() => {
+    
+// }, 1000)
+                           // one way would be this if we want an order
+// setTimeout(() => {
+    
+// }, 2000)
+// setTimeout(() => {
+    
+// }, 3000)
+
+// another way .. would be nesting setTimeouts so that innner i executed and then only the outer one
+// when one thing should happen only after some other thing is finished
+
+// <------- commonly used pattern -------->
+
+// two callbacks are passed one for success and other for failure
+// searchMovies('batman' , () => {
+//     saveToDatabase(movies, () => {
+//         // if everything went well, run this
+//     }, () => {
+//         // if it failed, run this
+//     })
+// }, () => {
+    //  if api is down
+// })
+// callabcks are used when we have to lets say call 3 api endpoints one after another
+// Callback hell can make the code messy and less understandable ... Enter Promises
+
+
+// <------------------------------- Promises ----------------------------->
+
+// A Promise is an object representing the eventual completion or failure of an aysnchronous operation.
+
+// using new keyword, we can create a promise
+// Promise --> PromiseStatus and PromiseValue
+// A promise is a returned object to which we attach callbacks, instead of passing callback into a function
+// on basis of resolve or reject
+
+// const newPromise = new Promise()
+// newPromise
+// .then(() => {
+//     console.log("success");
+        // runs when promise is resolved
+// })
+
+// .catch(() => {
+//     console.log('failure')
+        // runs when promise is rejected
+// })
+
+// we can significantly reduce this mess using promises
+
+// <--- Magic of Promises --->
+
+// fakeRequestPromises('dummyurl.com')
+// .then(() => {
+    //     console.log("1")
+    //     return fakeRequestPromises('dummyurl.com/1')
+    // })
+// .then(() => {
+         // console.log("1")
+         //return fakeRequestPromises('dummyurl.com/1')
+    // .catch(() => {
+//       console.log('Oh no .. Error')
+    // })
+// we can chain .then() like this
+
+// and the coolest part is that we can use only a single catch statement to catch error at any part
+    // })
+// this order is followed while the execution
+// a promise is usually resolved with some data passed
+// This is called Promise Chaining
+
+// <------------- Creating Promises ------------->
+
+// 
