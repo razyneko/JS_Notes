@@ -115,4 +115,41 @@
 
 // <------------- Creating Promises ------------->
 
-// 
+// function random() {
+    // return new Promise((resolve,reject) => somefunction())
+//  }
+
+// random()
+// .then(() => random())
+// .then(() => random())
+// we can chain them up like that
+// and a single .catch can be used to handle any reject
+
+// <---------------- Async / Await ------------------>
+
+// a newer and cleaner syntax for working with async code
+// Syntax "makeup" for promises (built upon promises)
+
+// <---- Async ---->
+
+// async functions always return a promise automatically (no explicit need to return new Promise)
+// if the function returns a value, the promise will be resolved with that value
+// if the function throws an exception/error, the promise will be rejected
+// we can throw errors in js --> throw new Error('this is an error')
+// we can also throw "error" (string)
+
+// <---- Await ---->
+
+// we mostly use await inside functions declared with async keyword or simply async functions
+// to wait for an async function to return
+// await will pause the execution of the function, waiting for a promise to be resolved
+// async function() {
+    // let data = await aPromiseReturningFunction() // waits for this promise to be resolved
+// console.log(data)
+// }
+
+// <----------- Handling Rejections ------->
+
+// using try catch ---> we can make sure if its rejected ... our code doesn't break
+
+// when we use try and catch --> catch(e) --> the (e) will contain the value with which promise was rejected
