@@ -156,7 +156,7 @@
 
 
 
-// <---------------- Synchronous JS ----------------->
+// <---------------- Synchronous Programming ----------------->
 
 // one task finishes then only second starts
 // if a sync program requires waiting for a response from a remote server or an API, the program will actually be stuck
