@@ -153,3 +153,23 @@
 // using try catch ---> we can make sure if its rejected ... our code doesn't break
 
 // when we use try and catch --> catch(e) --> the (e) will contain the value with which promise was rejected
+
+
+
+// <---------------- Synchronous JS ----------------->
+
+// one task finishes then only second starts
+// if a sync program requires waiting for a response from a remote server or an API, the program will actually be stuck
+// waiting for the response , wont be able to do anything until response is returned ... sometimes knowns as block-in
+// to avoid that ... Async Programming comes into picture
+
+
+// <----------------- Async Programming ---------------->
+
+// It is a process that allows an application to run a second set of instructions while focusing on its primary or basic process
+// Async Programming has several benefits including improved application performance, wide application to different coding langauges, and better user experience
+// A few use cases of async programming inlcude reduced inefficiencies from an app and efficient data collection
+
+// Function passed as an argument to another function is callback
+
+// basically one way to achieve async code would be using nested callaback... but the downside is callback hell 
