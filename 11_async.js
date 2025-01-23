@@ -172,4 +172,4 @@
 
 // Function passed as an argument to another function is callback
 
-// basically one way to achieve async code would be using nested callaback... but the downside is callback hell 
+// basically one way to achieve async code would be using nested callaback... but the downside is callback hell ... Enters into picture -- "Promise"
