@@ -146,6 +146,7 @@
 // async function() {
     // let data = await aPromiseReturningFunction() // waits for this promise to be resolved
 // console.log(data)
+
 // }
 
 // <----------- Handling Rejections ------->
@@ -153,6 +154,48 @@
 // using try catch ---> we can make sure if its rejected ... our code doesn't break
 
 // when we use try and catch --> catch(e) --> the (e) will contain the value with which promise was rejected
+
+
+
+// <------------------- Making Requests --------------------->
+
+// <-------- AJAX -------->
+// Asynchronous Javascript and XML
+// making request on the page while its already loaded or after it is loaded
+// we get data from the server in JSON ... not html css js --> its renedered locally by our browser
+
+// <-------- APIs ------------>
+
+// Application Programming Interface
+// computing interface which defines interaction between multiple software
+// WebAPIs are simply called APIs in web dev industry
+
+// <---------- WebAPIs ---------->
+
+// API for either a web server or a web browser  ... work on HTTP
+// they expose some endpoints .. they respond with information for the code to consume
+// kind of a portal to a database to fetch information 
+// theres a lot that we can do other than fetching data .. ex Twitter API, Facebook API
+// check out Twilio ... its cool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -172,4 +215,44 @@
 
 // Function passed as an argument to another function is callback
 
-// basically one way to achieve async code would be using nested callaback... but the downside is callback hell ... Enters into picture -- "Promise"
+// basically one way to achieve async code would be using nested callabacks... but the downside is callback hell ... Enters into picture -- "Promise"
+
+// <----------- Promises --------------->
+
+// A Promise has 3 possible states:
+
+// (1) Pending
+// (2) fulfilled -> a value is returned
+// (3) Rejected -> an error has occured
+
+// const promise = new Promise((resolve, reject) => {
+//     const isOkay = false;
+
+//     isOkay ? resolve('Everything is okay!') : reject("OOPS! something's wrong")
+// })
+
+// const promise =  new Promise((res,rej) => {
+//         const isOkay = true;
+//         setTimeout(() => {
+//             isOkay ? res('Okay okay') : rej('oops')
+//         },4000)
+// })
+
+// the value that is passed to then or catch is the resolve or reject value
+
+// <------------ Promise.all() ------------>
+
+// to consume several promises at the same time and in a specific order
+// Promise.all([promiseOne, promiseTwo ...])
+
+// .then((data) => console.log(data[0], data[1]))   ---> data (resolved values are also stored in an array)
+// .catch(err) => console.log(err) --> a single catch can be used
+// if any one of them is rejected ... we get the error
+
+// async/await are just syntactical sugar built on top of promises, easier to read
+// in a regular function async is not valid
+// use try catch so that due to one error , entire app doesnt break
+
+
+
+// <--------------------- Fetch API -------------------->
