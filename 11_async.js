@@ -160,7 +160,14 @@
 // <------------------- Making Requests --------------------->
 
 // <-------- AJAX -------->
-// Asynchronous Javascript and XML
+
+// (Asynchronous JavaScript and XML)
+// Definition: Technique to update parts of a web page without reloading, using asynchronous HTTP requests.
+// Key Features:
+// Uses XMLHttpRequest or Fetch API.
+// Can send/receive data in formats like JSON, XML, or plain text.
+// Improves user experience with dynamic content loading.
+// Example Use Case: Fetching live data like weather or chat messages without refreshing the page.
 // making request on the page while its already loaded or after it is loaded
 // we get data from the server in JSON ... not html css js --> its renedered locally by our browser
 
@@ -172,12 +179,52 @@
 
 // <---------- WebAPIs ---------->
 
+// Definition: Web APIs are interfaces provided by the browser to interact with underlying functionality, such as manipulating the DOM, fetching data, or interacting with hardware.
+// Examples:
+// DOM API: For accessing and modifying HTML elements.
+// Fetch API: For making HTTP requests.
+// Geolocation API: For getting user's location.
+// Web Storage API: For localStorage and sessionStorage.
 // API for either a web server or a web browser  ... work on HTTP
 // they expose some endpoints .. they respond with information for the code to consume
 // kind of a portal to a database to fetch information 
 // theres a lot that we can do other than fetching data .. ex Twitter API, Facebook API
-// check out Twilio ... its cool
+// check out TwilioAPI ... its cool
 
+// <----------- JSON ----------->
+
+// Javascript Object Notation
+// format to send data
+// keys should be in double quotes .. not even single quotes
+// undefined cant be use 
+// we get a string of data from the API not the json itself
+// JSON.parse() : json => js object
+// JSON.stringify() : js object => json
+// by default all instances of undefined are replaces with null and all unsupported native data types are censored
+// its basically AJAJ 
+// XML isnt used nowadays .. it consisted of HTML like structure with custom tags
+
+
+// <------------- HTTP Verbs ---------------->
+
+// GET, POST, PUT, PATCH, DELETE etc
+
+// <------------------ HTTP Status Codes ----------------->
+
+// code that comes back in a http response
+// starting with 2 -> succesful requests
+// starting with 3 -> redirection messages
+// starting with 4 -> Client error responses .. smth gone wrong in the client side
+// starting with -> server side errors 
+// typing google.co --> redirects to google.com  --> 301 (redirection)
+
+// <----------------- Query String -------------->
+
+// if a query isnt matched or is wrong .. it doesnt give an error we just get teh data from the endpoint
+
+// <--------------- HTTP Headers ---------------->
+
+// we set content-type : application/json
 
 
 

@@ -56,3 +56,68 @@ if an element is position absolute but i want the element inside it to be always
 } */
 
 /* whitespace: no-wrap --> means come to the same line if not */
+
+
+/* <--------------- Cool Tips for Responsive Design ---------------> */
+
+/* (1) Relative Padding ... instead of using media query use min() function
+    padding : min(4em, 8%)
+    4 em will be smaller than 8% for desktop .. but 8% will be smaller for smaller screens
+
+    (2) Responsive Font Sizes ... instead of pixels .. use rem(relative to root's font size)
+    use vw (viewport width) ... but not alone as it can get way too big in bigger screens and way too
+    less in smaller screens 
+    solution : use clamp() function to clamp the value with in 3 values
+    font-size : clamp(1.8rem, 10vw, 5rem)
+            -> 10vw until min or max is not reached
+    but there's a problem .. this heading with vw font-size wont resize if the window is zoomed out
+    or zoomed in 
+    Fix--> use calc(7vw + 1rem) instead for the preferred
+    font-size : clamp(min, calc( 7vw + 1rem), max)
+
+    (3) Responsive Images ...
+        by default html images are not responsive
+        if max-width : 100%
+        it will take max width as of div but it will shrink also on compression
+
+        for SEO reasons its good to define height and width in img html tag as attributes
+
+        CLS (cumulative layout shift) :
+            basically until image is not loaded text takes up its space
+        to remove this we give height and width in the html
+
+        we want no CLS .. the space is always reserved
+
+        For 1 image :
+        height : auto
+        max-width : 100%
+
+        For more than one images(with different dimension) :
+            we can use the aspect-ratio property 
+            aspect-ratio: 9 / 16 --> mobile size 16 / 9 --> desktop size
+            now the image may look stretched 
+            so use object-fit : contain / cover
+            contain leaves empty spaces
+            cover is suggested to maintain aspect ratio and cover entire aspect ratio
+            while contain will containerize itself to the 9 / 16 but not cover the whole space
+            this result in consistent image dimensions
+
+    (4) <---------- 100vh Problem ------>
+        this takes up full height of viewport in desktop well 
+        but in mobile phones we have to scroll for the same page that happens because the 
+        browser reserve some space for some menu 
+
+        to fix that ... css introduced a new property called "dvh" (dynamic viewport height)
+        we can set both .. in case of browser compatibilty issues
+
+    (5) display : none for toggling hamburger icon 
+        transitions wont work
+        we use opacity to fade in or fade out
+        or use position: absolute to move the element off-screen
+        these techniques are not accessible, coz hidden elems are still acceible and tapable and remain
+        in the accessibility tree
+
+        solution : inert attribute removes the element from the accesibility tree so that user cant accidentaly
+        interact with element
+        use removeAttribute('inert;) .. setAttribute(inert, '')
+*/
