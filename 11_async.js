@@ -224,27 +224,141 @@
 
 // <--------------- HTTP Headers ---------------->
 
+// HTTP headers are key-value pairs sent between the client and server to provide metadata about the request or response.
+// Types:
+// Request Headers: Sent by the client to the server (e.g., User-Agent, Authorization).
+// Response Headers: Sent by the server to the client (e.g., Content-Type, Cache-Control).
+// General Headers: Used in both requests and responses but don’t relate to the content itself (e.g., Date, Connection).
+// Common Headers:
+// Content-Type: Describes the data format (e.g., application/json).
+// Authorization: Contains credentials for authenticating the user.
+// Accept: Specifies the media types that are acceptable in the response.
+// User-Agent: Identifies the client software.
+// Cache-Control: Controls caching behavior.
 // we set content-type : application/json
 
 
+// <---------------- XMLHttpRequest --------------->
+
+// the orignal way of sending rquests via js
+// doesnt support promises .. so tons of callbacks will be there
+// Syntax:
+
+// creating an new XHR object
+// const req = new XMLHttpRequest();
+// req.onload = () => {
+//     console.log("ur content")
+//     console.log(this)  // this returns the XHR object which contains response and responseText
+//  console.log(JSON.parse(this.responseText)) // converts to js object
+// }
+// req.onerror = () => {
+//     console.log('Error');
+//     console.log(this)
+// }
+// req.open('GET', 'some api end point'); // swapi - star wars api
+// req.send();
+
+// for many request we need to nest the requests
 
 
+// <---------------------- Fetch API ------------------------->
+
+// newer than XHR and supports promises
+// fetch function returns a promise
+// other than url we can pass an object with url with headers and stuff
+// response object body is not already parsed ... its a readable stream
+// promise is resolved as soon as requets get any header .. but to read the body .. promise is resolved as soon as it can
+// we have to read and parse the readable stream
+// in fetch api the "res"(fetch resonse object) has a built in method called json() to read the body and parse the json.. its not the same as JSON.parse
+// but the thing to note is that res.json() also returns a promise
+// so we could do .then on the same line but as we saw that promise chaining makes code cleaner .. so we return res.json() and chain a .then after the current .then
+// for making another request we can use fetch again and return that and again chain .then
+// instead of nesting chaining is preferred but that also makes it serialized .. meaning first one should always be resolved for the second one to be made
+
+// fetch("someurl.com/id")
+// .then((res) = > { return res.json() })
+// .then((res) => {return res.json() })
+// .then((data) => {console.log(data); return fetch('some other url.com/api/name') })
+// .then((res) => { return res.json() }
+// .then((data) => {console.log(data)})
+// .catch((e) => {console.log('error)})
+
+// <---------- cleaner way --------->
+
+// use async / await
+// const request = async () => {
+    // try{
+        //     const res = await fetch('apiendpoint');
+//     const data = await res.json();
+//     console.log(data)
+// <------ one more request ------>
+    // const res2 = await fetch('someotherendpoint');
+    // const data2 = await res2.json();
+    // console.log(data2)
+    // }
+    // catch(e) {
+    //     console.log(e)
+    // }
+// }
+
+// request();
+
+// when using async functions .. by default error is not handled
+// so we should always wrap the content with try / catch
+
+// the only not so good thing about fetch was sperate promise for json parsing or seperate json parsing
+// comes into picture "Axios"
 
 
+// <----------------------- Axios -------------------------->
 
+// include the cdn or do npm i axios
+// a library for making http requests
+// we dont have to parse json using res.json()
+// we just call axios.get('url)
+// .then((res) => console.log(res))
+// axios parses the res and fill in the res.json() to "data" field
+// axios.get('url')
+// .then(() => )
+// .catch(() =>)
+// we could do the same thing inside an async func
+// const request = async () => {
+//     const res = await axios.get('url');
+//     const data = res.data;
+// }
+// again whenever using async functions it should be wrapped with try catch to handle errors
 
+// <-------- Setting headers with Axios ----->
 
+// we can pass an object as a second parameter (config object) in axios.get alongside url .. this object can contain various objs like
+//  header object .. in which we can specify headers
 
+// async() => {
+//     const config = {
+//         headers: {
+//             Accept : 'application/json'
+//         }
+//     }
+//     const req = axios.get('url', config)
+// }
 
+// whenever some lines of code performs an individual task -- we should make a function for it
+// this makes our code modular
+// if any request is made directly or indirectly inside the fucntion we should make it async and use await for responses
+// async function returns a promise
+// inside the form object we have elements inside which we have access to name attribute we provided to input
+// we can use form.elements.nameValue.value to get the value typed in the input
+// we can use template literals for query if there is only one query .. but if we have to add more than one its kinf of janky
+// as we did with headers ... queries go into params obejct
+// we can create a config object and inside it we can add a params object containing all the queries
+// config is not strictly named
 
+// <---------------------------- Why u need to be a good problem solver ? ------------------------------->
 
-
-
-
-
-
-
-
+// while solving problems we always think if the array comes out to be empty we have to make a check for that
+// similarly if im calling to an endpoint and i want to get 10 results ..... we should think in the way 
+// what if if it doesnt have 10 results
+// if we want to get image of every lets say show froma  tv show api ... we have to make a check if the image is not present for that particular show
 
 // <---------------- Synchronous Programming ----------------->
 
