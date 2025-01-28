@@ -6,3 +6,5 @@
 typeof "hi";
 // returns String
 
+// dynamically placing values using template literals --> interpolation
+
