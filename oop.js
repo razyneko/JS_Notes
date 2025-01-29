@@ -74,3 +74,78 @@
 // now ColorOne.method === ColorTwo.method ---> gives true ... since it is inside the proto
 // you dont want to use arrow functions when dealing with constructors and stuff coz this behaves differently for arrow functions
 // but now since we have to define methods seperately .... so we have prettier way to do the same stuff ...laoding "Classes"
+
+
+// <--------------------- Classes -------------------------->
+
+// we dont have to add methods to prototype manually
+// class Color {
+    // the name us usually started with capital letter
+// }
+// we can define a constructor() for a class which will create us an object or instance of that class, it takes args that will be the part of the class
+// to instantiate a new object of a class we use new keyword
+// we can define some inherent props in the constructor so that every instance will have those variables in the object
+// class Color {
+//     constructor(r,g,b) {
+//         this.r = r;
+//         this.g = g;
+//         this.b = b;
+//     }
+// }
+
+// the object that it creates has its constructor set to class Color itself
+// adding methods to the class doesnt add to the instance rather the proto itself.. so every instance has access to that same method
+// to call a method inside other method ... just use plain old this.method()
+// the data defined inside the constructor will be specific to any created instance
+// methods are added to prototype automatically
+// if insid ea method we use this.var1 = var1 etc it will just be added to the same instance only
+
+
+// <---------------------- extends and super (inheritance) ----------------------->
+
+// sharing functionality between classes
+// it has to do with subclassing
+
+// <------- extends -------->
+// to inherit from a class
+
+// class Pet {
+//     constructor(name,age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     eat() {
+//         return `${this.name} is eating.`
+//     }
+// }
+
+// class Dog extends Pet {
+//     bark() {
+//         return 'WOOF!'
+//     }
+// }
+
+// class Cat extends Pet{
+//     meow() {
+//         return 'MEOW!'
+//     }
+// }
+//
+// if we call a method from a dog obejct its looks for the method in the object first then the class that its inherting from 
+// so if both have eat() method the one that is defined inside the Dog Class will be executed
+
+// <------ super -------->
+
+// super is a refernece to super class(the one with which sub classes inherit from ) .. reference of the class we are extending from
+// of dog need the vars from the Pet constructor but also has its own vars
+// then we can do smth like this
+// class Dog extends Pet {
+//     constructor(name, age, someOtherThing){
+//         super(name, age) // it calls the constructor of Pet
+//         this.someOtherThing = someOtherThing;
+//     }
+//      bark() {
+    //         return 'WOOF!'
+    //     }
+// }

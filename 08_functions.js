@@ -19,6 +19,59 @@
 //     inner();
 // }
 
+// <------------------ this keyword for functions -------------------->
+
+// The value of this in JavaScript depends on how a function is called, not where it is defined.
+
+// Global Context or Default Binding:
+    // In non-strict mode, this refers to the global object (window in browsers, global in Node.js) if the function is called standalone.
+    // In strict mode, this will be undefined.
+    // function test() {
+    //     console.log(this); // In non-strict: global object, In strict: undefined
+    // }
+
+// Object Context:
+// When a function is called as a method of an object, this refers to that object.
+// const obj = {
+//     name: "Ayush",
+//     greet() {
+//         console.log(this.name); // "Ayush"
+//     }
+// };
+// obj.greet();
+
+// Arrow Functions:
+// Arrow functions do not have their own this. Instead, they inherit this from the enclosing (lexical) scope where they are defined.
+
+// const obj = {
+//     name: "Ayush",
+//     greet: () => {
+//         console.log(this.name); // `this` is from outer scope (likely global or undefined)
+//     }
+// };
+// obj.greet(); // undefined
+
+// Explicit Binding:
+// You can explicitly set the value of this using .call(), .apply(), or .bind().
+// function test() {
+//     console.log(this.name);
+// }
+// const obj = { name: "Ayush" };
+// test.call(obj); // "Ayush"
+
+// Constructor Function or Class:
+
+// In a constructor function or a class, this refers to the newly created instance.
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     greet() {
+//         console.log(this.name);
+//     }
+// }
+// const ayush = new Person("Ayush");
+// ayush.greet(); // "Ayush"
 
 // <----------------- Function Expression ------------------>
 

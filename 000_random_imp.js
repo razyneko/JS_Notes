@@ -41,7 +41,7 @@
 
 
 // <----------------------------- Inline Scripts ---------------------->
-// You can also write inline JavaScript directly inside a <script> tag in the document.
+// You can also write inline JavaScript directly inside a <script> tag in the HTML.
 
 // <!DOCTYPE html>
 // <html>
@@ -64,6 +64,33 @@
 // Place non-critical scripts at the end of the <body> for better performance.
 // Avoid using async for scripts that depend on each other (it can lead to execution order issues)
 
+// <-------------------- Number.isNaN() ------------------->
 // Number.isNaN(num) to check if numebr is NaN
 // disabled property of an element object takes boolean values 
-// 'true' --> truthy but 'false' --> truthy as well
+// 'true' --> truthy but 'false' --> truthy as its a non empty string
+
+
+//<------------------ Optional chaining (?.) ------------------->
+
+// The optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
+// it allows you to safely access deeply nested object properties without manually checking if each level exists if a property is null or undefined, it stops and returns undefined instead of throwing an error
+
+// <----- Why to use ? ---->
+
+// avoids runtime errors when accessing  nested properties
+// simplifies code by removing manual checks
+
+// const adventurer = {
+//     name: 'Alice',
+//     cat: {
+//       name: 'Dinah',
+//     },
+//   };
+  
+//   const dogName = adventurer.dog?.name;
+//   console.log(dogName);
+//   // Expected output: undefined
+  
+//   console.log(adventurer.someNonExistentMethod?.());
+//   // Expected output: undefined
+  

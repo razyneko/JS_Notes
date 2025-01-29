@@ -4,15 +4,15 @@
 // variables(can be changed whatever times we need) and constants (can't be changed once assigned)
 
 // var let const 
-// Hoisting - being able to access of a var or func before declaring it coz vars and funcs are hoisted on the top of code
+// Hoisting - being able to access of a "var" or "func" before declaring it coz vars and funcs are hoisted on the top of code
 
 // var a = 12; ==> js breaks down it like this
-// var a; (declaration) //  and this is hoisted on the top of code so log code below will give undefined
+// var a; (declaration) //  and this is hoisted on the top of code so log below will give undefined
 // a = 12; (initialisation)
 // console.log(a) // not considering lines  9 - 11
 // var a = 12;
 
-// Undefined and Not Defined are not same
+// <------------------ "undefined" and "not defined" are not same thing ----------------->
 // -----variable declared but not initialised is undefined
 // -----variable which is not even declared , has no existence in code is Not Defined 
 
