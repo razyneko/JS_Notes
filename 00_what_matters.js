@@ -10,7 +10,7 @@
 // Data Types in JS
 // ---- Primitive type -->  no reference is passed only value is copied
 // ---- Reference type [], {}, () includes brackets  -->  in this if a = [1,2,34,5] then if we do,  b = a  
-// the reference of a will be passes and any changes in b will appear in a also
+// the reference of a will be passed and any changes in b will appear in a also
 // pointing to same refrence as a 
 
 // We shouldn't use loops for like 2 or 3 ops coz using console.log() 3 times is far easier ,
@@ -96,15 +96,18 @@
 // ---> variables
 // ---> all the funcs inside that parent function
 // ---> lexical environment of this function -> it tells about what can be accessed from the E.C
-// ---> Lexical env is sort of a chart where its mentioned which variables can be accessed by parent 
-//      func and which vars it cant access, it consists scope and scope chain
-//  child functions can access parent function variables
+//      --> Lexical env is sort of a chart where its mentioned which variables can be accessed by parent 
+//          func and which vars it cant access, it consists scope and scope chain,
+//          child functions can access parent function variables
 
-// Parent func will have access to all vars inside its body and functions defined but the vars inside 
+// Parent func will have access to all vars inside its body and functions defined but
 // the child function's variables cant't be accessed since var is function scoped so they remain only 
 // inside that function
 
 // // This imaginary container is called Execution Context
+
+// <------------------------- How JavaScript code is executed ? ----------------------->
+// 
 
 // <----------------- Spread Operator --------------->
 // <---- Copying Reference Types ---->

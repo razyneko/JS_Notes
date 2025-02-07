@@ -121,3 +121,11 @@ if an element is position absolute but i want the element inside it to be always
         interact with element
         use removeAttribute('inert;) .. setAttribute(inert, '')
 */
+
+
+/*
+ <----------- BEM Model --------->
+ 
+ BEM stands for Block, Element, Modifier and it is a naming convention or methodology used in CSS to create a modular and maintainable codebase
+ 
+ */

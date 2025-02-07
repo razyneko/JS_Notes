@@ -97,5 +97,5 @@
 // var a = 12; ==> js breaks down it like this
 // var a; (declaration) //  and this is hoisted on the top of code so log below will give undefined
 // a = 12; (initialisation)
-// console.log(a) // not considering lines  9 - 11
+// console.log(a) // not considering lines 
 // var a = 12;
