@@ -158,13 +158,21 @@
 
 // creates a new array that passes some test by the callback function
 // callback returns a boolean, if true the elem is added to new array
+// if nothing is returned it is considered to be false
 // parent array remains same
 // if i want like >8.5 imdb rating movies in my movies array of objects
-
+// length of the filtered array will always be lesser than or equal to len of array being operated
 // We can chain filter and map together, there will be usecases
 // movies
     // .filter(() => {})
     // .map(() => {})
+
+// <--------------- arr.find() -------------->
+
+// The find() method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values
+// satisfy the testing function, undefined is returned.
+// arr.find((val) => val > 12) returns first number greater than 12
+// returns undefined if no such number exists
 
 // <----------- Every ------------->
 

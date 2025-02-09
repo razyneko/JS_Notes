@@ -18,3 +18,4 @@
 // Object.values(obj_name) ---> gives array of values of obj_name
 // Object.entries(obj_name) ---> gives nested array of keys and values
 // now since they give array we can use for of
+// use Object.freeze(obj) -> to freeze any change ... no property can be change like obj.age = 12

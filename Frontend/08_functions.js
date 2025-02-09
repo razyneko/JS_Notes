@@ -4,6 +4,9 @@
 // Order of arguments does matter
 // we can store values when we call a func that returns something
 // no code after return is executed, it stops execution of the function
+// function's length is number of parameters in arguments array
+// console.dir(somefunc) -> arguments array and length prop can be seen
+// somefun.length -> number of parameters in the function
 
 // <------------------- Scope ------------------->
 
