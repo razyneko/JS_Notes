@@ -69,3 +69,23 @@
 
 // when we require an entire directory node will look for the index.js file, whatever that fil exports is the data that the dir exports
 // packages we use has this kind of structure
+
+// <-------------- npm ------------------->
+
+// to install a specific version npm i something@4.0.8
+// npm start npm test --> we dont use run for it why ? we use it for npm run dev
+// these are added to path 
+
+// <--------- Express ---------------->
+
+// it is a npm package and a framework that manages everything from recieving requests to sending response, connecting to databases etc
+// "/" is the root route --> facebook.com <==> facebook.com/
+// requestHandler is also a middleware
+// stuff that can be used or done before route handling by server can be called as middleware
+// comes in between acceptance of request by server and route handling by server
+// app.use(function(req, res, next) {
+    //do some stuff
+//     next(); -> it sends the request to routes now
+// })
+// there is an order
+// error handler ?

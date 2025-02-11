@@ -10,10 +10,70 @@
  
 <!--                            
 lorem23 --- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi expedita accusamus mollitia voluptatum nam reprehenderit, sit enim? Molestias maiores inventore sapiente praesentium esse.
- --> -->
+ --> 
 
 <!-- div  -- rectange with full width of screen but no height -->
 <!-- height of div === total height of its childrens -->
 
+<!-- HTML5 has some elements that identify different content areas, these elements makes our HTML easier to read and help with SEO(search engine optimization) and accesibility -->
+
+<!-- The main element is used to represent the main content of the body of an HTML document. Content inside the main element should be unique to the document and should not be repeated in other parts of the document. -->
+
+<!-- You can add images to your website by using the img element. img elements have an opening tag without a closing tag. An element without a closing tag is known as a void element. -->
+
+<!-- HTML attributes are special words used inside the opening tag of an element to control the element's behavior. The src attribute in an img element specifies the image's URL (where the image is located). -->
+
+<!-- All img elements should have an alt attribute. The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load , To improve accessibility of the image you added, add an alt attribute -->
+
+<!-- anchor is not self closing, we put the name of the link -->
+ <!-- Other types of content can also be turned into a link by wrapping it in anchor tags other than text like images or an entire div -->
+ <!-- target="_blank" for opening link in new tab -->
+
+ <!-- The section element is used to define sections in a document, such as chapters, headers, footers, or any other sections of the document. It is a semantic element that helps with SEO and accessibility. -->
+
+ <!-- When you add a lower rank heading element to the page, it's implied that you're starting a new subsection. -->
+
+ <!-- ul for unordered list and ol for ordered list -->
+
+ <!-- The figure element represents self-contained content and will allow you to associate an image with a caption. 
+  A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element.
+ -->
+
+ <!-- To place emphasis on a specific word or phrase, you can use the em element. 
+  The strong element is used to indicate that some text is of strong importance or urgent.
+  -->
+<!-- The action attribute indicates where form data should be sent. it sends it to the url passed in action -->
+
+ <!--In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value to represent the data being submitted.  -->
+ <!-- 
+ The name attribute in HTML is used to assign a unique identifier to an input element within a form. It indicates the key name that will be sent to the server when the form is submitted.
+
+Key Points:
+It's used to pair data when a form is submitted, in the form of key-value pairs (name=value).
+Without a name, an input field’s value won't be sent to the server during form submission.
+It's important for backend systems to process and identify data correctly.
+ -->
+<!-- Placeholder text is used to give people a hint about what kind of information to enter into an input. -->
+
+ <!-- To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element. There's no need to set a value to the required attribute. Instead, just add the word required to the input element, making sure there is space between it and other attributes. -->
+
+  <!--  The default behavior of clicking a form button without any attributes submits the form to the location specified in the form's action attribute.However, relying on default behavior may cause confusion. Add the type attribute with the value submit to the button to make it clear that it is a submit button. -->
+
+    <!-- input and button are inline elements -->
+
+<!-- You can use radio buttons for questions where you want only one answer out of multiple options. -->
+
+<!-- label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers) -->
+
+<!-- The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page. -->
+ <!-- <input type="radio" name="meal"> Breakfast
+<input type="radio" name="meal"> Lunch 
+if we create two radio buttons like this they can be selected both at a time, to fix that
+To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value.
+
+If you select one radio button and submit the form, the form data for the button is based on its name and value attributes. Since your radio buttons do not have a value attribute, the form data will include "common-name-attribute"=on, which is not useful when you have multiple buttons.
+
+Add a value attribute to both radio buttons -->
 <!-- ------------------- HTML ----------------- -->
+
 
