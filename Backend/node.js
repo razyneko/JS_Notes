@@ -72,9 +72,22 @@
 
 // <-------------- npm ------------------->
 
+// node package manager
+// a library of thousands of packages / cli tool to install and manage those packages
+// when we install a package node modules folder is created and package-lock.json(record of content of node modules directory)  it is all the code that is required by that package
+// when we do npm i package we install it locally on that specific directory
+// to intsall globally npm i -g cowsay
+// installs at highest level of the pc
+// if installed globally -> we can access in a repo with npm link package_name
+// most of the time we will use local installation
 // to install a specific version npm i something@4.0.8
 // npm start npm test --> we dont use run for it why ? we use it for npm run dev
 // these are added to path 
+// package.json -> metadata and info about the project - dependencies, dev dependencies etc
+// creation utility for package.json (template) -> npm init
+// kind of a record for the project
+// it helps in keeping track of the dependencies and helpful for sharing the project and installing same project on a different machine
+// when we use npm install -> it installs all dependencies listed on the package.
 
 // <--------- Express ---------------->
 
@@ -89,3 +102,14 @@
 // })
 // there is an order
 // error handler ?
+
+// when we log in server gives us kind of a token that is stored at server and client both and any time next you interact server knows who uare using this cookie
+//  cookies are data that is stored in the client(browser)
+// by using this cookie we can interact with the server, server knows this cookie and 
+// this whole conenction with that cookie is a session
+// process of login to logout  -> session
+// next time login --> new session is created
+// app.use(express.json())
+// app.use(express.urlencoded({ extended: true }))
+
+// 
