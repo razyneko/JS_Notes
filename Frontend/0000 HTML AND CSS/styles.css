@@ -122,7 +122,9 @@ if an element is position absolute but i want the element inside it to be always
         interact with element
         use removeAttribute('inert;) .. setAttribute(inert, '')
 */
+/* By default, inline elements don't respect margin-top and margin-bottom, but they do respect margin-left and margin-right.
 
+However, if you change an inline element to inline-block, it will start respecting all margins. */
 
 /*
  <----------- BEM Model --------->

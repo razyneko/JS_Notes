@@ -44,7 +44,7 @@
 // sync ones block the entire code halting all connections
 // fs.mkdir() -> async 
 // fs.mkdirSync() -> sync
-
+// when readin file we need to give a seconf param "utf-8" otherwise it will be read in Buffer
 // const random = process.argv[2] || "Project" --> we can use this way if no arg is passed
 // fs.writeFileSync() to write in a file ..  creates if it doesnt exist / overwrite if present
 // these are created from where the script is ran

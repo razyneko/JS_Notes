@@ -39,6 +39,8 @@
 // route paths are matched and the callback is executed
 // routes are matched in order
 // but get and post also matters
+// we need to use the name attribute in case of form inputs to be able to use easily by server
+// res.redirect("/") to redirect to root route
 
 // <------------ Express Path Parameters ---------->
 
@@ -55,3 +57,4 @@
 // so if "/search?q=dogs&color=red" so query object - { q: 'dogs', color: 'red' }
 // all the parsing stuff is done by express
 // we can always check if query was even passed or not by using if(!q)
+
