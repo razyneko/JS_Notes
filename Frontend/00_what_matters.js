@@ -35,12 +35,17 @@
 // Arrays are collection of more than one data , the data type in js need not be the same
 
 // Some common methods ->
-//      push() -> to add at the last
-//      pop()  -> to remove from the last
-//      shift()  -> to remove element from start
-//      unshift() -> to add element at start
+//      push() -> to add at the last --> returns new length of the array
+//      pop()  -> to remove from the last --> returns that removed element (even if it has argument -> ignored not an error)
+//      shift()  -> to remove element from start --> returns that element (even if it has argument -> ignored not an error)
+//      unshift() -> to add element at start --> returns new length of the array
 //      spilce(index from where to start removing elements , count of how many to remove)  -> to 
-//             remove an index from the middle
+//             remove an index from the middle ... if 0 removes -> it adds
+//      it returns an array of removed elements
+//      (index, how many to delete, what to add(seperated by commas)) -> if 0 removes then can be used to replace (delete and insert)
+//      splice modifies the original array
+//      use toSpliced() -> to create a new array instead
+//      use slice() to get a part of the array without modifying it -> returns new array
 
 // <-------------- Objects -------------------->
 // var obj = {} --> empty object
@@ -48,7 +53,7 @@
 
 // var user = { 
     // name: "ayush"
-    // address: "gkp"
+    // address: "east-blue"
     // sayHello: function() {
         // console.log("hello ayush");
     // }

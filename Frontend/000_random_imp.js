@@ -57,7 +57,17 @@
 // </html>
 
 // Note: Inline scripts should be avoided for security reasons (e.g., susceptibility to cross-site scripting).
+// Avoid inline scripts to reduce the risk of Cross-Site Scripting (XSS), as they can be easily exploited if an attacker injects malicious JavaScript. Instead, use external scripts or event listeners in separate files to enhance security.
+// How to Prevent XSS
+// Avoid inline scripts (<script>alert(1)</script> inside HTML).
+// Use Content Security Policy (CSP) (script-src 'self' to block inline scripts).
+// Sanitize and validate user input before displaying it.
+// Use textContent instead of innerHTML in JavaScript.
+// Escape output when inserting user input into HTML.
 
+// Sanitization in XSS prevention means cleaning user input to remove or neutralize harmful code before processing or displaying it. This prevents malicious scripts from executing.
+// document.body.innerHTML = "<h1>" + userInput + "</h1>"; // Risky if userInput contains <script> tags
+// document.body.textContent = userInput; // Renders as plain text, not HTML  
 
 // <-------------------- Best Practices ------------------->
 // Use defer for external scripts in the <head> to ensure the script doesn’t block rendering.
