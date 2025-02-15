@@ -30,3 +30,29 @@
 // we can access the data in the view to render it
 // data will be an object (key value pairs of details)
 // we can pass it just { data } rather than { data: data }
+
+// if we use a ternary operatorin ejs we do need <%= %> to evaluate it
+// loops for similar data
+// if we pass an object on res.send we have to use data.prop1 \ data.prop2 to access the data
+// we can use spread operator to pass the data to the view 
+// res.render('home', { ...data }) then we can access the properties directly by their name in the view
+
+// <---------- Serving Static Files in Express (css/js) --------->
+
+// we use express.static() to serve static files (a middleware)
+// whatever type of request comes in, it goes through all the middleware
+// if we have served public directory
+// we can access the files in the public directory directly without /public in the path
+// but the same issue we faced with the views directory, we need to set the absolute path to the public directory
+// app.use(express.static(path.join(__dirname, 'public')))
+// everything in the public directory is served as static assets
+// the fact the static assets are served we can acces them using /css/style.css in the route
+
+// <------------------ EJS Partials ----------------->
+// <% include('partials/header') %> -> include the header.ejs file in the current file
+// we can get rid of redundant code in the views by using partials
+// we can create a partials directory and put the header.ejs file in it
+// it also reduces the need to make changes in multiple files, we can just change the base file
+
+// <%- %> (it will be treated as html)
+// <%= %> (outputs the value (html escaped))

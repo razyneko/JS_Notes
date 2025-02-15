@@ -62,17 +62,14 @@ Authorization: Determines what you can do (e.g., access control based on roles).
 // Examples: Windows Server, Linux Server (Ubuntu Server, CentOS, etc.).
 // Types of Servers (Based on Services Provided)
 // Web/Application Server (Primary Server)
-
 // Stores and serves website/application files.
 // Handles HTTP requests.
 // Examples: Apache, Nginx, Node.js, Express.
 // Database Server (Secondary Server)
-
 // Stores and manages structured data.
 // Used by APIs and applications to retrieve or modify data.
 // Examples: PostgreSQL, MySQL, MongoDB.
 // Email Server (Secondary Server)
-
 // Implements SMTP (Simple Mail Transfer Protocol) to send and receive emails.
 // Examples: Postfix, Microsoft Exchange, Sendmail.
 // Server Setup Options:
