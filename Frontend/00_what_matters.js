@@ -118,6 +118,13 @@
 //
 // This imaginary container is called the Execution Context.
 
+// <----------------- Scope Chain ------------------->
+// A scope chain in JavaScript is the mechanism that determines how variables are accessed in nested functions.
+
+// When a variable is accessed inside a function, JavaScript first looks in the local scope (inside that function).
+// If not found, it moves up to the outer (parent) scope, then to the global scope.
+// If the variable isn't found anywhere, it results in a ReferenceError.
+
 // <------------- How JS code is executed ? ------------->
 // go to executionContext.js
 
