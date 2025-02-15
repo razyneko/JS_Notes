@@ -27,4 +27,13 @@
    6️⃣ Video Conferencing (Zoom, Google Meet, Microsoft Teams) → Live video meetings.
    7️⃣ Gaming & Streaming (Twitch, YouTube, Netflix, Cloud Gaming)→ Entertainment services.
    8️⃣ IoT (Internet of Things) → Smart devices communicating via the internet.
+
+
+
+
+
+Authentication: Verifies who you are (e.g., login with username & password).
+Authorization: Determines what you can do (e.g., access control based on roles).
+🔑 AuthN (Authentication) → Identity Verification
+🔐 AuthZ (Authorization) → Permission Management
 */

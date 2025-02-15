@@ -8,3 +8,5 @@ typeof "hi";
 
 // dynamically placing values using template literals --> interpolation
 
+// primitive data types 
+// Numbers , String , Boolean , Null , Undefined, Symbol and BigInt

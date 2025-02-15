@@ -78,11 +78,10 @@
 //     }
 //     console.log(i) // here i = 3
 // }
+// Output -> 0 , 1 , 2 , 3(for outer log)
 
 // var adds itself to window object
-// but this is not good since data can be exposed since window can be accessed from the browser and it
-// adds itself to it
-// Output -> 0 , 1 , 2 , 3(for outer log)
+// but this is not good since data can be exposed since window can be accessed from the browser
 
 // there are some features which are not in js language itself but they are provided by the browser which we can use in our code, all those features we can find inside window object, its not part of js
 // alert, prompt, setTimeout, setInterval etc. are provied by window object which is provided by the browser to js to use 
@@ -91,28 +90,36 @@
 // don't add themselves to window object
 
 // Browser provides sort of three things --> 
-// window object, stack(callstack) and heap memory (collectively all three --> Browser context API)
-// all the variables, data and intermediate data is stored in Heap Memory
-// Intermediate data --> 1+2+3+4+5+6 = 3 + (3 + 4 + 5 + 6)  // computer also doesnt calculate it in one go so intermediate 3 will be stored in heap and further will proceed
+
+// window object(Global object containing browser APIs (document, localStorage, etc.).), stack(callstack, Manages function execution order in JavaScript.) and heap memory(Stores dynamically allocated objects.) (collectively all three --> Browser execution environment)
+// These together form the JavaScript runtime environment inside the browser, which is responsible for executing JavaScript code.
+// In programming, "heap" refers to the dynamically allocated memory where objects, variables, and data structures are stored at runtime. The heap is a large pool of memory that can be used to store data that is not needed immediately.
+// Simple number calculations (like 1+2+3+4+5+6) → All handled in stack. (1+2) then (3 + 3) like this way
+// Heap memory is used for dynamic memory allocation (e.g., objects, data structures).
+// Unlike stack memory (which is used for function calls and local variables), heap memory persists until manually cleared (e.g., via free() in C or garbage collection(automatic) in JavaScript/Python).
+// It has no fixed size and can grow as needed (within system limits).
+// primtive types are stored in stack memory(let a = 10;  // Stored in the stack, directly holding 10)
+// non primitive(dynamic memory allocation) are stored in heap memory (but reference(pointer) to them is stored in stack memory)
 
 // <-------- Execution Context -------->
-// whenever a function is executed it creates a sort of imaginary container where function's code is executed, it includes three 
-// things:
-// ---> variables
-// ---> all the funcs inside that parent function
-// ---> lexical environment of this function -> it tells about what can be accessed from the E.C
-//      --> Lexical env is sort of a chart where its mentioned which variables can be accessed by parent 
-//          func and which vars it cant access, it consists scope and scope chain,
-//          child functions can access parent function variables
 
-// Parent func will have access to all vars inside its body and functions defined but
-// the child function's variables cant't be accessed since var is function scoped so they remain only 
-// inside that function
+// Whenever a function is executed, it creates a sort of imaginary container where the function's code is executed. 
+// This container includes three things:
+// ---> Variables
+// ---> All functions defined inside that parent function
+// ---> The lexical environment of this function → it determines what can be accessed from the E.C
+//      --> The lexical environment is like a chart that lists which variables the parent function can access 
+//          and which it cannot. It consists of scope and the scope chain,
+//          and child functions can access parent function variables.
+//
+// The parent function has access to all variables and functions defined within its body,  
+// but the parent function cannot access variables declared inside its child function,  
+// since variables are function-scoped and remain only inside the function where they are declared.
+//
+// This imaginary container is called the Execution Context.
 
-// // This imaginary container is called Execution Context
-
-// <------------------------- How JavaScript code is executed ? ----------------------->
-// 
+// <------------- How JS code is executed ? ------------->
+// go to executionContext.js
 
 // <----------------- Spread Operator --------------->
 // <---- Copying Reference Types ---->
