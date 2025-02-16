@@ -58,6 +58,29 @@ if an element is position absolute but i want the element inside it to be always
 
 /* whitespace: no-wrap --> means come to the same line if not */
 
+/* <------------------------ freeCodeCamp -----------------> */
+/*
+    There are two main color models: the additive RGB (red, green, blue) model used in electronic devices, and the subtractive CMYK (cyan, magenta, yellow, black) model used in print.
+    rgb(red, green, blue);
+    Each red, green, and blue value is a number from 0 to 255. 0 means that there's 0% of that color, and is black. 255 means that there's 100% of that color.
+    rgb(0, 255, 0) is lighter green compared to bg-color: green;
+    the green color keyword is actually a darker shade, and is about halfway between black and the maximum value for green.
+    the additive RGB color model, primary colors are colors that, when combined, create pure white. 
+    Secondary colors are the colors you get when you combine primary colors
+    Tertiary colors are created by combining a primary with a nearby secondary color.
+    A color wheel is a circle where similar colors, or hues, are near each other, and different ones are further apart. For example, pure red is between the hues rose and orange.
+    we should avoid complementary colors next to each other, it can be distracting if it's overused on a website, and can make text hard to read if it's placed on a complementary-colored background.
+    it's better practice to choose one color as the dominant color, and use its complementary color as an accent to bring attention to certain content on the page.
+    Notice how your eyes are naturally drawn to the red color (with black on both sides) in the center? When designing a site, you can use this effect to draw attention to important headings, buttons, or links.
+    Two colors that are opposite from each other on the color wheel are called complementary colors. If two complementary colors are combined, they produce gray. But when they are placed side-by-side, these colors produce strong visual contrast and appear brighter.
+    A very common way to apply color to an element with CSS is with hexadecimal or hex values. While hex values sound complicated, they're really just another form of RGB values.
+    Hex color values start with a # character and take six characters from 0-9 and A-F. The first pair of characters represent red, the second pair represent green, and the third pair represent blue. For example, #4B5320.
+    Hexadecimal, or base 16 values, go from 0 - 9, then A - F:  
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+    With hex colors, 00 is 0% of that color, and FF is 100%. So #00FF00 translates to 0% red, 100% green, and 0% blue, and is the same as rgb(0, 255, 0).
+ */
+/* <------------------------ freeCodeCamp -----------------> */
+
 
 /* <--------------- Cool Tips for Responsive Design ---------------> */
 
@@ -125,6 +148,8 @@ if an element is position absolute but i want the element inside it to be always
 /* By default, inline elements don't respect margin-top and margin-bottom, but they do respect margin-left and margin-right.
 
 However, if you change an inline element to inline-block, it will start respecting all margins. */
+
+
 
 /*
  <----------- BEM Model --------->

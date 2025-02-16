@@ -49,10 +49,10 @@
 // the fact the static assets are served we can acces them using /css/style.css in the route
 
 // <------------------ EJS Partials ----------------->
-// <% include('partials/header') %> -> include the header.ejs file in the current file
+// <%- include('partials/header') %> -> include the header.ejs file in the current file
 // we can get rid of redundant code in the views by using partials
 // we can create a partials directory and put the header.ejs file in it
 // it also reduces the need to make changes in multiple files, we can just change the base file
 
-// <%- %> (it will be treated as html)
+// <%- %> (it will be treated as html(unescaped))
 // <%= %> (outputs the value (html escaped))
